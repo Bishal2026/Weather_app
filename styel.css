@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://images.pexels.com/photos/17306837/pexels-photo-17306837/free-photo-of-wave-on-sea-coast-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+
+}
+.container{
+    padding-left: 50px;
+    
+    color: #000000;
+}
+
+.current_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.date_container .time{
+    font-weight: 200;
+    font-size: 120px;
+}
+
+.date_container #am_pm{
+    font-size: 30px;
+  
+}
+
+.date{
+    font-size: 30px;
+    margin-left: 33px;
+}
+
+.place_container{
+    text-align: end;
+    padding: 30px;
+
+}
+
+.place_container .time_zone{
+    font-size: 30px;
+}
+.place_container .country{
+    font-weight: 700;
+
+}
+
+
+.others{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    color: #ffffff;
+    background-color: #3f3b3bd1;
+    border: 3px solid  #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+.weater_item{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.future-forecast{
+    background: #18181bcc;
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color:white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.future-forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+.future-forecast .today .day{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    background: #00000033
+}
+
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #3C3C44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        padding: 20px;
+    }
+    
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+    .future-forecast .today .temp{
+        font-size: 16px;
+    }
+
+    .date_container .time{
+        font-size: 50px;
+    }
+
+    .date_container #am_pm{
+        font-size: 20px;
+    }
+
+    .date_container .date{
+        font-size: 20px;
+    }
+
+    .place_container{
+        text-align: end;
+        margin-top: 15px;
+    }
+
+    .place_container .time_zone{
+        font-size: 20px;
+        margin-bottom: -8px;
+    }
+
+    .current_info .others{
+        padding: 12px;
+    }
+
+    .current_info .others .weater_item{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 1400px){
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}
